@@ -2,11 +2,11 @@
 
 import streamlit as st
 import numpy as np
-import pickle
+import joblib
 
 # Load the model and scaler
-ridge_model = pickle.load(open('models/ridge.pkl', 'rb'))
-standard_scaler = pickle.load(open('models/scaler.pkl', 'rb'))
+ridge_model = joblib.load('models/ridge.pkl')
+standard_scaler = joblib.load('models/scaler.pkl')
 
 # Streamlit UI
 st.title("🔥 Algerian Forest Fire Prediction App")
